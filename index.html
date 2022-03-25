@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <title>Stone, paper and scissors game</title>
+</head>
+<style>
+    body {
+        font-family: 'Patrick Hand', cursive;
+        background: rgb(230, 255, 181);
+        margin: 0;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 450px;
+      background: #38b6ff;
+      position: relative;
+      border-radius: 4px;
+    }
+    h1 {
+        font-size: 50px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .form-container {
+        margin: 0;
+        margin-bottom: 14px;
+        padding: 10px;
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background: #fff952;
+        border-radius: 8px;
+    }
+    p {
+        font-weight: bold;
+        margin: 0;
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .form__p {
+      margin: 0 10px 0 0;
+      padding: 0;
+    }
+    .form__select {
+        border-radius: 4px;
+        background: rgb(230, 255, 181);
+        font-family: 'Patrick Hand', cursive;
+        font-size: 20px;
+        border: none;
+    }
+    .form__button {
+        margin-top: 12px;
+        border: none;
+        border-radius: 8px;
+        background: rgb(7, 7, 39);
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Patrick Hand', cursive;
+        color: white;
+    }
+    .subtitle {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .answer-title {
+      font-size: 34px;
+      color: #fff952;
+      margin: 0;
+    }
+    .result-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .result-container__text {
+      font-size: 42px;
+      color: darkslateblue;
+    }
+</style>
+<body>
+  <section>
+    <h1>Let's play!</h1> 
+    <div class="form-container">
+      <form>
+        <p class="form__p">Choose</p>
+        <select class="form__select" name="options" id="selection">
+          <option value="Stone" selected>Stone</option>
+          <option value="Paper">Paper</option>
+          <option value="Scissors">Scissors</option>
+        </select>
+      </form> 
+      <button class="form__button" id="playButton">play</button>
+    </div>
+  
+    <p class="subtitle">Your choice is:</p>
+    <p class="answer-title" id="yourChoice"></p>
+    <p class="subtitle">Computer choice is:</p>
+    <p class="answer-title" id="computerChoice"></p>
+    <div class="result-container"> 
+      <p class="result-container__text" id="result"></p>
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <script src="./functions.js"></script>
+</body>
+</html>
